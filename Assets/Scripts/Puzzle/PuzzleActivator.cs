@@ -1,4 +1,5 @@
-﻿using Interface;
+﻿using System;
+using Interface;
 using Manager;
 using UnityEngine;
 
@@ -9,16 +10,16 @@ namespace Puzzle
 
         public int myNumberInPuzzleManager;
         public GameObject onRangeImage;
+        public bool isInteracting = false;
 
-
-        public void CanInteract()
+        private void Update()
         {
-            onRangeImage.SetActive(true);
+            onRangeImage.SetActive(isInteracting);
         }
 
-        public void CantInteract()
+        public void ControlIcon(bool state)
         {
-            onRangeImage.SetActive(false);
+            isInteracting = state;
         }
 
         public void OnInteract()

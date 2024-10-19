@@ -13,7 +13,7 @@ namespace Puzzle
         {
             img = GetComponent<Image>();
         }
-
+        
         public void Cortar()
         {
             img.sprite = fioCortado;

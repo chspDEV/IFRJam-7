@@ -1,20 +1,21 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Manager
 {
     public class GameManager : MonoBehaviour
     {
-    
         public static GameManager Instance { get; private set; }
 
         [SerializeField] private GameState state;
         public GameState State { get; private set; }
 
-        public float levelTimer = 60f;
-        public Slider levelTimerSlider;
+        public float levelTimer;
+        private float levelMaxTimer = 60f;
+        public Image levelTimerImage;
         public int winnerEntitys = 0;
         public Sprite doorOpen;
         
@@ -29,6 +30,8 @@ namespace Manager
         {
             if (Instance != null && Instance != this) { Destroy(this); }
             else { Instance = this; }
+
+            levelTimer = levelMaxTimer;
         }
 
         private void Start()
@@ -68,6 +71,8 @@ namespace Manager
             HandleMenuHolders();
             HandleChangeDoors();
         }
+        
+        
 
         private void HandleMenuHolders()
         {
@@ -105,7 +110,7 @@ namespace Manager
             else
             {
                 levelTimer -= Time.deltaTime;
-                levelTimerSlider.value = levelTimer;
+                levelTimerImage.fillAmount = levelTimer / levelMaxTimer;
             }
         
         }

@@ -3,8 +3,7 @@
     public interface IInteractable
     {
         void OnInteract();
-        void CanInteract();
-        void CantInteract();
+        void ControlIcon(bool state);
 
     }
 }

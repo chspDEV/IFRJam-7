@@ -34,7 +34,7 @@ namespace Puzzle
                 Debug.Log("Nao foi possivel achar componente Wire " + btn.name);
             }
 
-            GameManager.Instance.levelTimer += 2f;
+            GameManager.Instance.levelTimer += 5f;
             fiosCertosCortados++;
             if (fiosCertosCortados >= fiosCertos)
             {
