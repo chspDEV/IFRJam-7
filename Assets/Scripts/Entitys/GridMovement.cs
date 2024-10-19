@@ -14,11 +14,13 @@ namespace Entitys
         private Vector2 targetPosition;
         private bool isMoving = false;
         private Rigidbody2D rb;
+        private SpriteRenderer spriteRenderer;
         private Color debugColor = Color.white;
 
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             targetPosition = rb.position;
         }
 
@@ -38,19 +40,21 @@ namespace Entitys
             {
                 Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-
                 if (Mathf.Abs(input.x) > 0 && Mathf.Abs(input.y) > 0)
                 {
                     input = Vector2.zero;
                 }
 
-
                 if (input != Vector2.zero)
                 {
-                    Vector2 nextPosition = invertMovement ? targetPosition - new Vector2(input.x, input.y) * gridSize
+                    Vector2 nextPosition = invertMovement 
+                        ? targetPosition - new Vector2(input.x, input.y) * gridSize 
                         : targetPosition + new Vector2(input.x, input.y) * gridSize;
-                    if (!IsBlocked(nextPosition))
+
+                    if (!IsBlocked(nextPosition) && !isMoving)
                     {
+                        spriteRenderer.flipX = invertMovement ? (input.x < 0) : (input.x > 0); 
+                        
                         debugColor = Color.green;
                         StartCoroutine(MoveToPosition(nextPosition));
                     }
@@ -65,7 +69,6 @@ namespace Entitys
         IEnumerator MoveToPosition(Vector2 destination)
         {
             isMoving = true;
-        
 
             while (rb.position != destination)
             {
@@ -74,6 +77,8 @@ namespace Entitys
                 yield return null;
             }
 
+            var i = GetComponent<Interactor>();
+            i.HandleInteract();
             targetPosition = destination;
             isMoving = false;
         }
@@ -88,7 +93,7 @@ namespace Entitys
         {
             Gizmos.color = debugColor;
 
-            if(rb != null)
+            if (rb != null)
                 Gizmos.DrawLine(rb.position, targetPosition);
         }
     }

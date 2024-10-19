@@ -12,19 +12,18 @@ namespace Entitys
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
-            InvokeRepeating(nameof(HandleInteract), 0.5f, 1.5f);
         }
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E) && cInteractable != null )
+            if (Input.GetKeyDown(KeyCode.E) && cInteractable != null)
             {
                 cInteractable.OnInteract();
                 Debug.Log("interagi! " + gameObject.name);
             }
         }
 
-        private void HandleInteract()
+        public void HandleInteract()
         {
             Debug.Log("Chequei interacao! " + gameObject.name);
 
@@ -34,7 +33,9 @@ namespace Entitys
                 Vector2.left,
                 Vector2.right
             };
-            
+
+            IInteractable foundInteractable = null;
+
             foreach (var direction in directions)
             {
                 RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, gridSize, LayerMask.GetMask("Interactable"));
@@ -44,21 +45,22 @@ namespace Entitys
                     IInteractable interactable = hit.collider.GetComponent<IInteractable>();
                     if (interactable != null)
                     {
-
-                        cInteractable = interactable;
-                        Debug.Log("POSSO interagir! " + gameObject.name);
+                        foundInteractable = interactable;
+                        Debug.Log("Posso interagir! " + gameObject.name);
                         interactable.ControlIcon(true);
-                    }
-                    else
-                    {
-                        cInteractable.ControlIcon(false);
-                        Debug.Log("Saindo de perto de: " + gameObject.name);
-                        cInteractable = null;
+                        break;
                     }
                 }
             }
 
-            cInteractable = null;
+            if (foundInteractable == null && cInteractable != null)
+            {
+                cInteractable.ControlIcon(false);
+                cInteractable.OnLeave();
+                Debug.Log("LIMPANDO INTERACTABLES");
+            }
+
+            cInteractable = foundInteractable;
         }
 
         private void OnDrawGizmos()

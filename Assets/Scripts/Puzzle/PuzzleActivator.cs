@@ -17,6 +17,11 @@ namespace Puzzle
             onRangeImage.SetActive(isInteracting);
         }
 
+        public void OnLeave()
+        {
+            PuzzleManager.Instance.ControlarPuzzle(myNumberInPuzzleManager, false);
+        }
+
         public void ControlIcon(bool state)
         {
             isInteracting = state;
@@ -24,7 +29,7 @@ namespace Puzzle
 
         public void OnInteract()
         {
-            PuzzleManager.Instance.AtivarPuzzle(myNumberInPuzzleManager);
+            PuzzleManager.Instance.ControlarPuzzle(myNumberInPuzzleManager, true);
         }
 
 

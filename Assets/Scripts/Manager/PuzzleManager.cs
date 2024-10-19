@@ -24,9 +24,9 @@ namespace Manager
             canWin = false;
         }
         
-        public void AtivarPuzzle(int numero)
+        public void ControlarPuzzle(int numero, bool state)
         {
-            puzzleList[numero].SetActive(true);
+            puzzleList[numero].SetActive(state);
         }
 
         public bool CheckVictory()

@@ -84,6 +84,20 @@
             },
             "m_InputSlot": {
                 "m_Node": {
+                    "m_Id": "64da0575914c46dd9a2b3dfcfeab9434"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "0b1e0aad640248b49becc323f92cde4b"
+                },
+                "m_SlotId": 7
+            },
+            "m_InputSlot": {
+                "m_Node": {
                     "m_Id": "8966582b49254fe396af84f9c7b47383"
                 },
                 "m_SlotId": 1
@@ -436,7 +450,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"c375f3304ebbf314caa031b018bc5a4e\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"d329c7b3adcc6ed41a5fb0bf9cb2507f\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -472,10 +486,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1375.8455810546875,
-            "y": 11.845550537109375,
-            "width": 208.0,
-            "height": 326.0
+            "x": 1352.0001220703125,
+            "y": 20.9999942779541,
+            "width": 207.9998779296875,
+            "height": 325.9999694824219
         }
     },
     "m_Slots": [
@@ -777,10 +791,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 940.1111450195313,
-            "y": 2.1111679077148439,
-            "width": 208.0,
-            "height": 302.0
+            "x": 940.0000610351563,
+            "y": -19.9999942779541,
+            "width": 130.00006103515626,
+            "height": 117.99998474121094
         }
     },
     "m_Slots": [
@@ -1327,7 +1341,7 @@
             "r": 1.0,
             "g": 1.0,
             "b": 1.0,
-            "a": 0.0
+            "a": 1.0
         },
         "mode": 0
     }
