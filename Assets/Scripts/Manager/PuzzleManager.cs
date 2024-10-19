@@ -10,10 +10,19 @@ namespace Manager
 
         public string currentScene;
         public bool canWin = false;
+        public int conditionsToWin = 2;
+        public int currentConditions = 0;
+        
+        
+        //Fase 1
         private int fiosCorretosCortados = 0;
         private readonly int fiosCorretosFase1 = 2;
         private readonly string senhaCorretaFase1 = "batatasfritas";
+        
+        //Fase 2
         private readonly string ordemCorretaFase2 = "134972";
+        
+        //Fase 3
 
         public List<GameObject> puzzleList;
 
@@ -31,7 +40,11 @@ namespace Manager
             fiosCorretosCortados    ++;
             GameManager.Instance.levelTimer += 2f;
 
-            if(fiosCorretosCortados >= fiosCorretosFase1) canWin = true;
+            if (fiosCorretosCortados >= fiosCorretosFase1)
+            {
+                conditionsToWin++;
+                CheckVictory();
+            }
         }
 
         public void CortarFioErrado()
@@ -41,12 +54,29 @@ namespace Manager
 
         public void ChecarOrdem(string resposta)
         {
-            if (resposta == ordemCorretaFase2) { canWin = true; }
+            if (resposta == ordemCorretaFase2)
+            {
+                GameManager.Instance.levelTimer += 2f;
+                conditionsToWin++;
+                CheckVictory();
+                return;
+            }
+            
+            GameManager.Instance.levelTimer -= 5f;
         }
 
         public void ChecarSenha(string resposta)
         {
-            if (resposta == senhaCorretaFase1) { canWin = true; }
+            if (resposta == senhaCorretaFase1)
+            {
+                GameManager.Instance.levelTimer += 2f;
+                conditionsToWin++;
+                CheckVictory();
+                return;
+            }
+            
+            GameManager.Instance.levelTimer -= 5f;
+            
         }
 
         public void AtivarPuzzle(int numero)
@@ -54,9 +84,29 @@ namespace Manager
             puzzleList[numero].SetActive(true);
         }
 
+        public bool CheckVictory()
+        {
+            if (currentConditions >= conditionsToWin)
+            {
+                canWin = true;
+            }
+            
+            return canWin;
+        }
+
+        public string ObterOrdem()
+        {
+            return ordemCorretaFase2;
+        }
+
         public void Update()
         {
- 
+            switch (currentScene)
+            {
+                default:
+                    conditionsToWin = 2;
+                    break;
+            }
         }
     }
 }

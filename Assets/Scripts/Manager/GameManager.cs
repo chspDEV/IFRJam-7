@@ -16,6 +16,9 @@ namespace Manager
 
         public int winnerEntitys = 0;
 
+        public GameObject leftDoor;
+        public GameObject rightDoor;
+        public Sprite doorOpen;
         private GameObject victoryHolder;
         private GameObject defeatHolder;
         private GameObject pauseHolder;
@@ -37,13 +40,23 @@ namespace Manager
             victoryHolder = GameObject.Find("VictoryHolder");
             defeatHolder = GameObject.Find("DefeatHolder");
             pauseHolder = GameObject.Find("PauseHolder");
+            leftDoor = GameObject.Find("Saida_L");
+            rightDoor = GameObject.Find("Saida_R");
 
-            //Desativando por padr�o
-            if (puzzles != null) { puzzles.SetActive(true); } else { Debug.LogError($"Objeto nao encontrado: {puzzles.name}"); }
-            if (victoryHolder != null) { victoryHolder.SetActive(false); } else { Debug.LogError($"Objeto nao encontrado: {victoryHolder.name}"); }
-            if (defeatHolder != null) { defeatHolder.SetActive(false); } else { Debug.LogError($"Objeto nao encontrado: {defeatHolder.name}"); }
-            if (pauseHolder != null) { pauseHolder.SetActive(false); } else { Debug.LogError($"Objeto nao encontrado: {pauseHolder.name}"); }
-        
+            //Tratamento
+            if (puzzles == null) { Debug.LogError($"Objeto nao encontrado: puzzles"); }
+            
+            if (victoryHolder != null) { victoryHolder.SetActive(false); } 
+            else { Debug.LogError($"Objeto nao encontrado: victoryHolder"); }
+            
+            if (defeatHolder != null) { defeatHolder.SetActive(false); } 
+            else { Debug.LogError($"Objeto nao encontrado: defeatHolder"); }
+            
+            if (pauseHolder != null) { pauseHolder.SetActive(false); } else 
+            { Debug.LogError($"Objeto nao encontrado: pause"); }
+            
+            if (leftDoor == null) { Debug.LogError($"Objeto nao encontrado: porta_L"); }
+            if (rightDoor == null) { Debug.LogError($"Objeto nao encontrado: porta_R"); }
         }
 
         private void Update()
@@ -52,6 +65,7 @@ namespace Manager
             HandleStates();
             HandlePause();
             HandleMenuHolders();
+            HandleChangeDoors();
         }
 
         private void HandleMenuHolders()
@@ -62,9 +76,18 @@ namespace Manager
             puzzles.SetActive(state == GameState.PLAY);
         }
 
-        public void SetState(GameState state)
+        // ReSharper disable Unity.PerformanceAnalysis
+        private void HandleChangeDoors()
         {
-            this.state = state;
+            if (!PuzzleManager.Instance.CheckVictory()) return;
+            
+            leftDoor.GetComponent<SpriteRenderer>().sprite = doorOpen;
+            rightDoor.GetComponent<SpriteRenderer>().sprite = doorOpen;
+        }
+
+        public void SetState(GameState _state)
+        {
+            this.state = _state;
         }
 
         void SetTimeScale(float value)
@@ -87,23 +110,12 @@ namespace Manager
 
         void HandlePause()
         {
-            bool condition_1 = Input.GetKeyDown(KeyCode.Escape);
-            bool condition_2 = state != GameState.DEFEAT && state != GameState.WIN;
+            bool condition1 = Input.GetKeyDown(KeyCode.Escape);
+            bool condition2 = state != GameState.DEFEAT && state != GameState.WIN;
 
-            if (condition_1 && condition_2)
-            {
-                if (state == GameState.PAUSED)
-                {
-                    SetState(GameState.PLAY);
-                    return;
-                }
-                else
-                {
-                    SetState(GameState.PAUSED);
-                    return;
-                }
-            }
+            if (!condition1 || !condition2) return;
 
+            SetState(state == GameState.PAUSED ? GameState.PLAY : GameState.PAUSED);
         }
 
         public void NextLevel()
