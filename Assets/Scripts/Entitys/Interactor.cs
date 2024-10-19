@@ -5,6 +5,7 @@ namespace Entitys
 {
     public class Interactor : MonoBehaviour
     {
+        [Header("Configuration")]
         private Rigidbody2D rb;
         public int gridSize = 1;
         public IInteractable cInteractable;

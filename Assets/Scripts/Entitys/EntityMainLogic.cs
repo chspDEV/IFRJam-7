@@ -6,11 +6,12 @@ namespace Entitys
 {
     public class EntityMainLogic : MonoBehaviour
     {
+        [Header("Movement")]
         public float gridSize = 1f;
         public float moveSpeed = 0.2f;
         [SerializeField] private bool invertMovement;
         public LayerMask obstacleLayer;
-
+        
         private Vector2 targetPosition;
         private bool isMoving;
         private Rigidbody2D rb;

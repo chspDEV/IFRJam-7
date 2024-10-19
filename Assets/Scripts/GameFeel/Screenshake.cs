@@ -5,6 +5,7 @@ namespace GameFeel
 {
     public class ScreenShake : MonoBehaviour
     {
+        [Header("Configuration")]
         public Transform cameraTransform; 
         public float shakeDuration = 0.5f; 
         public float shakeMagnitude = 0.1f; 
