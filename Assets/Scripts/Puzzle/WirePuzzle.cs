@@ -27,8 +27,13 @@ namespace Puzzle
         }
         
         public void CortarFioCerto(Button btn)
-        { 
-            btn.GetComponent<Wire>().Cortar();
+        {
+            if (btn != null) {btn.GetComponent<Wire>()?.Cortar();}
+            else
+            {
+                Debug.Log("Nao foi possivel achar componente Wire " + btn.name);
+            }
+
             GameManager.Instance.levelTimer += 2f;
             fiosCertosCortados++;
             if (fiosCertosCortados >= fiosCertos)
@@ -40,7 +45,12 @@ namespace Puzzle
 
         public void CortarFioErrado(Button btn)
         {
-            btn.GetComponent<Wire>().Cortar();
+            if (btn != null) {btn.GetComponent<Wire>()?.Cortar();}
+            else
+            {
+                Debug.Log("Nao foi possivel achar componente Wire " + btn.name);
+            }
+            
             GameManager.Instance.levelTimer -= 5f;
         }
 

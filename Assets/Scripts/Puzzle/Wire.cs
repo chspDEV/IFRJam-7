@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Puzzle
@@ -6,7 +7,12 @@ namespace Puzzle
     public class Wire: MonoBehaviour
     {
         public Sprite fioCortado;
-        public Image img;
+        private Image img;
+
+        private void Awake()
+        {
+            img = GetComponent<Image>();
+        }
 
         public void Cortar()
         {

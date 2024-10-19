@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Manager
 {
@@ -13,12 +14,12 @@ namespace Manager
         public GameState State { get; private set; }
 
         public float levelTimer = 60f;
-
+        public Slider levelTimerSlider;
         public int winnerEntitys = 0;
-
-        public GameObject leftDoor;
-        public GameObject rightDoor;
         public Sprite doorOpen;
+        
+        private GameObject rightDoor;
+        private GameObject leftDoor;
         private GameObject victoryHolder;
         private GameObject defeatHolder;
         private GameObject pauseHolder;
@@ -104,6 +105,7 @@ namespace Manager
             else
             {
                 levelTimer -= Time.deltaTime;
+                levelTimerSlider.value = levelTimer;
             }
         
         }
