@@ -7,7 +7,7 @@ namespace Puzzle
     public class WirePuzzle : MonoBehaviour
     {
         public int fiosCertos = 2;
-        public int fiosCertosCortados = 0;
+        public int fiosCertosCortados;
         
         public Button[] fiosCorretos;
         public Button[] fiosErrados;

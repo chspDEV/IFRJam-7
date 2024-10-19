@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Manager
@@ -11,12 +10,12 @@ namespace Manager
         public static GameManager Instance { get; private set; }
 
         [SerializeField] private GameState state;
-        public GameState State { get; private set; }
+        public GameState State { get {return state;} }
 
         public float levelTimer;
         private float levelMaxTimer = 60f;
         public Image levelTimerImage;
-        public int winnerEntitys = 0;
+        public int winnerEntitys;
         public Sprite doorOpen;
         
         private GameObject rightDoor;

@@ -9,9 +9,9 @@ namespace Manager
         public static PuzzleManager Instance { get; private set; }
 
         public string currentScene;
-        private bool canWin = false;
+        private bool canWin;
         [SerializeField] private int conditionsToWin = 2;
-        [SerializeField] private  int currentConditions = 0;
+        [SerializeField] private int currentConditions;
         
         public List<GameObject> puzzleList;
 
