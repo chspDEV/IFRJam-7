@@ -7,10 +7,10 @@ namespace Puzzle
 {
     public class ButtonPuzzle : MonoBehaviour
     {
+        public string correctSequence = "134972";
         private string playerSequence = "";
-        private string correctSequence;
+
         public TextMeshProUGUI display;
-        
         public Button[] buttons;
 
         void Start()
@@ -19,8 +19,7 @@ namespace Puzzle
             {
                 button.onClick.AddListener(() => ButtonPressed(button));
             }
-
-            correctSequence = PuzzleManager.Instance.ObterOrdem();
+            
         }
         
         void ButtonPressed(Button button)
@@ -40,10 +39,10 @@ namespace Puzzle
                 display.text = playerSequence;
             }
         }
-        
-        void PuzzleCompleted()
+
+        private void PuzzleCompleted()
         {
-            PuzzleManager.Instance.ChecarOrdem(playerSequence);
+            PuzzleManager.Instance.PuzzleWin();
         }
     }
 
