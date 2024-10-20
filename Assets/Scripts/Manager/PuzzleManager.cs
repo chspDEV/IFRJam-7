@@ -26,6 +26,8 @@ namespace Manager
         
         public void ControlarPuzzle(int numero, bool state)
         {
+            GameManager.Instance.SetState(state ? GameState.PUZZLE : GameState.PLAY);
+
             puzzleList[numero].SetActive(state);
         }
 

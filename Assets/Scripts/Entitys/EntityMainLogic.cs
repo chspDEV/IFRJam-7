@@ -32,49 +32,53 @@ namespace Entitys
 
         void FixedUpdate()
         {
+            var _enabled = (GameManager.Instance.State == GameState.PLAY);
+            if (!_enabled) return;
+            
             HandleMovement();
         }
 
         private void Update()
         {
-            enabled = (GameManager.Instance.State != GameState.DEFEAT || GameManager.Instance.State != GameState.WIN);
+            var _enabled = (GameManager.Instance.State == GameState.PLAY);
+            if (!_enabled) return;
+            
             UpdateState();
         }
 
         private void HandleMovement()
         {
-            if (!isMoving)
+            if (isMoving) return;
+            
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+            if (Mathf.Abs(input.x) > 0 && Mathf.Abs(input.y) > 0)
             {
-                Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+                input = Vector2.zero;
+            }
 
-                if (Mathf.Abs(input.x) > 0 && Mathf.Abs(input.y) > 0)
+            if (input != Vector2.zero)
+            {
+                Vector2 nextPosition = invertMovement
+                    ? targetPosition - new Vector2(input.x, input.y) * gridSize
+                    : targetPosition + new Vector2(input.x, input.y) * gridSize;
+
+                if (!IsBlocked(nextPosition) && !isMoving)
                 {
-                    input = Vector2.zero;
-                }
+                    spriteRenderer.flipX = invertMovement ? (input.x < 0) : (input.x > 0);
 
-                if (input != Vector2.zero)
-                {
-                    Vector2 nextPosition = invertMovement
-                        ? targetPosition - new Vector2(input.x, input.y) * gridSize
-                        : targetPosition + new Vector2(input.x, input.y) * gridSize;
-
-                    if (!IsBlocked(nextPosition) && !isMoving)
-                    {
-                        spriteRenderer.flipX = invertMovement ? (input.x < 0) : (input.x > 0);
-
-                        debugColor = Color.green;
-                        StartCoroutine(MoveToPosition(nextPosition));
-                    }
-                    else
-                    {
-                        debugColor = Color.red;
-                    }
+                    debugColor = Color.green;
+                    StartCoroutine(MoveToPosition(nextPosition));
                 }
                 else
                 {
-                    // Sem input, o state muda para Idle
-                    currentState = State.Idle;
+                    debugColor = Color.red;
                 }
+            }
+            else
+            {
+                // Sem input, o state muda para Idle
+                currentState = State.Idle;
             }
         }
 
@@ -115,11 +119,11 @@ namespace Entitys
             switch (currentState)
             {
                 case State.Idle:
-                    animator.Play("Idle"); 
+                    animator.CrossFade("Idle", 0.35f); 
                     break;
 
                 case State.Walking:
-                    animator.Play("Walk"); 
+                    animator.CrossFade("Walk", 0.35f); 
                     break;
             }
         }

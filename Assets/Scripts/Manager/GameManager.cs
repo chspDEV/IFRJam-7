@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,19 +12,25 @@ namespace Manager
 
         [SerializeField] private GameState state;
         public GameState State { get {return state;} }
-
-        public float levelTimer;
-        private float levelMaxTimer = 60f;
-        public Image levelTimerImage;
-        public int winnerEntitys;
-        public Sprite doorOpen;
         
-        private GameObject rightDoor;
-        private GameObject leftDoor;
-        private GameObject victoryHolder;
-        private GameObject defeatHolder;
-        private GameObject pauseHolder;
-        private GameObject puzzles;
+        [Header("LevelVariables")]
+        public float levelMaxTimer = 60f;
+        [HideInInspector] public float levelTimer;
+        public int winnerEntitys;
+        
+        [Header("Sprites")]
+        public Image levelTimerImage;
+        public Sprite doorOpen;
+
+        [Header("Transform References")] 
+        public RectTransform mainCanvas;
+        public Transform scenaryHolder;
+        public Transform mainCameraTransform;
+        public Transform cameraMask;
+        
+        private GameObject rightDoor, leftDoor, victoryHolder, defeatHolder, pauseHolder, puzzles;
+        private float mainCameraSize;
+        private Camera mainCamera;
 
         private void Awake()
         {
@@ -31,6 +38,8 @@ namespace Manager
             else { Instance = this; }
 
             levelTimer = levelMaxTimer;
+            mainCamera = mainCameraTransform.gameObject.GetComponent<Camera>();
+            mainCameraSize = mainCamera.orthographicSize;
         }
 
         private void Start()
@@ -39,12 +48,16 @@ namespace Manager
             state = GameState.PLAY;
 
             //Achando GO
-            puzzles = GameObject.Find("Puzzles");
-            victoryHolder = GameObject.Find("VictoryHolder");
-            defeatHolder = GameObject.Find("DefeatHolder");
-            pauseHolder = GameObject.Find("PauseHolder");
-            leftDoor = GameObject.Find("Saida_L");
-            rightDoor = GameObject.Find("Saida_R");
+            puzzles = mainCanvas.Find("Puzzles").gameObject;
+            
+            Transform Essentials = mainCanvas.Find("Essentials");
+            
+            victoryHolder = Essentials.Find("VictoryHolder").gameObject;
+            defeatHolder = Essentials.Find("DefeatHolder").gameObject;
+            pauseHolder = Essentials.Find("PauseHolder").gameObject;
+            
+            leftDoor = scenaryHolder.Find("Saida_L").gameObject;
+            rightDoor = scenaryHolder.Find("Saida_R").gameObject;
 
             //Tratamento
             if (puzzles == null) { Debug.LogError($"Objeto nao encontrado: puzzles"); }
@@ -60,6 +73,8 @@ namespace Manager
             
             if (leftDoor == null) { Debug.LogError($"Objeto nao encontrado: porta_L"); }
             if (rightDoor == null) { Debug.LogError($"Objeto nao encontrado: porta_R"); }
+
+            StartCoroutine(CameraTransition());
         }
 
         private void Update()
@@ -70,15 +85,30 @@ namespace Manager
             HandleMenuHolders();
             HandleChangeDoors();
         }
-        
-        
+
+        private IEnumerator CameraTransition()
+        {
+            yield return new WaitForSecondsRealtime(3f);
+
+            while (mainCameraSize > 6f)
+            {
+                mainCameraSize -= 0.01f;
+                mainCamera.orthographicSize = mainCameraSize;
+                
+                yield return null;
+            }
+
+            cameraMask.gameObject.SetActive(true);
+
+            yield return null;
+        }
 
         private void HandleMenuHolders()
         {
             pauseHolder.SetActive(state == GameState.PAUSED);
             victoryHolder.SetActive(state == GameState.WIN);
             defeatHolder.SetActive(state == GameState.DEFEAT);
-            puzzles.SetActive(state == GameState.PLAY);
+            puzzles.SetActive(state == GameState.PUZZLE);
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -152,6 +182,9 @@ namespace Manager
                 case GameState.PLAY:
                     SetTimeScale(1f);
                     break;
+                case GameState.PUZZLE:
+                    SetTimeScale(0.9f);
+                    break;
             }
         }
     }
@@ -162,6 +195,7 @@ namespace Manager
         PAUSED,
         DEFEAT,
         WIN,
-        PLAY
+        PLAY,
+        PUZZLE
     }
 }

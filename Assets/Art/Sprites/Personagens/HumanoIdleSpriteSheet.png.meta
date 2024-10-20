@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: d329c7b3adcc6ed41a5fb0bf9cb2507f
+guid: e64641ec5b7da984d821ddef9607dd3c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4915708560509176596
-    second: DogAndandoSpriteSheet_0
+      213: 3165526079602149482
+    second: DorivalIdleSS_0
   - first:
-      213: 3268201008547447613
-    second: DogAndandoSpriteSheet_1
+      213: -158585189101834053
+    second: DorivalIdleSS_1
   - first:
-      213: -2593273667624295313
-    second: DogAndandoSpriteSheet_2
+      213: -5267164231551479046
+    second: DorivalIdleSS_2
   - first:
-      213: -9044587619914462794
-    second: DogAndandoSpriteSheet_3
+      213: -1924296530231995444
+    second: DorivalIdleSS_3
+  - first:
+      213: -403450677547375069
+    second: DorivalIdleSS_4
+  - first:
+      213: 5414089954823460131
+    second: DorivalIdleSS_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_0
+      name: DorivalIdleSS_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 12
+        x: 19
+        y: 1
         width: 26
-        height: 46
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41b0f7824ea183440800000000000000
-      internalID: 4915708560509176596
+      spriteID: a68cbed92353eeb20800000000000000
+      internalID: 3165526079602149482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_1
+      name: DorivalIdleSS_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 12
-        width: 26
-        height: 46
+        x: 80
+        y: 1
+        width: 27
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d334b09608bfa5d20800000000000000
-      internalID: 3268201008547447613
+      spriteID: bb072f85c979ccdf0800000000000000
+      internalID: -158585189101834053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_2
+      name: DorivalIdleSS_2
       rect:
         serializedVersion: 2
-        x: 139
-        y: 12
-        width: 26
-        height: 46
+        x: 141
+        y: 1
+        width: 27
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6421ebc657d20cd0800000000000000
-      internalID: -2593273667624295313
+      spriteID: af21bbcb90647e6b0800000000000000
+      internalID: -5267164231551479046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_3
+      name: DorivalIdleSS_3
       rect:
         serializedVersion: 2
-        x: 201
-        y: 12
-        width: 26
-        height: 46
+        x: 204
+        y: 1
+        width: 27
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +196,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b94a1fda7b2b7280800000000000000
-      internalID: -9044587619914462794
+      spriteID: cc3510940868b45e0800000000000000
+      internalID: -1924296530231995444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DorivalIdleSS_4
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326e5601fb7a66af0800000000000000
+      internalID: -403450677547375069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DorivalIdleSS_5
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325534bf026b22b40800000000000000
+      internalID: 5414089954823460131
       vertices: []
       indices: 
       edges: []
@@ -200,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 43db4f2c70b911d43a216b34b2cebee2
+    spriteID: 2a0344c825a19e447bd6f0fb808c89b4
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DogAndandoSpriteSheet_0: 4915708560509176596
-      DogAndandoSpriteSheet_1: 3268201008547447613
-      DogAndandoSpriteSheet_2: -2593273667624295313
-      DogAndandoSpriteSheet_3: -9044587619914462794
+      DorivalIdleSS_0: 3165526079602149482
+      DorivalIdleSS_1: -158585189101834053
+      DorivalIdleSS_2: -5267164231551479046
+      DorivalIdleSS_3: -1924296530231995444
+      DorivalIdleSS_4: -403450677547375069
+      DorivalIdleSS_5: 5414089954823460131
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

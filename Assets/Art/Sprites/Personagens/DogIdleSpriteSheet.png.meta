@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: d329c7b3adcc6ed41a5fb0bf9cb2507f
+guid: c31242c8a394ffd46942e346be9b5021
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4915708560509176596
-    second: DogAndandoSpriteSheet_0
+      213: -861370988060573722
+    second: DogIdleSpriteSheet_0
   - first:
-      213: 3268201008547447613
-    second: DogAndandoSpriteSheet_1
+      213: -6469211086992858648
+    second: DogIdleSpriteSheet_1
   - first:
-      213: -2593273667624295313
-    second: DogAndandoSpriteSheet_2
+      213: -3212472402756815215
+    second: DogIdleSpriteSheet_2
   - first:
-      213: -9044587619914462794
-    second: DogAndandoSpriteSheet_3
+      213: -4352851496710885264
+    second: DogIdleSpriteSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_0
+      name: DogIdleSpriteSheet_0
       rect:
         serializedVersion: 2
         x: 15
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41b0f7824ea183440800000000000000
-      internalID: 4915708560509176596
+      spriteID: 6ef72dc66abcb04f0800000000000000
+      internalID: -861370988060573722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_1
+      name: DogIdleSpriteSheet_1
       rect:
         serializedVersion: 2
         x: 77
@@ -146,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d334b09608bfa5d20800000000000000
-      internalID: 3268201008547447613
+      spriteID: 8e1a5ceaaceb836a0800000000000000
+      internalID: -6469211086992858648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_2
+      name: DogIdleSpriteSheet_2
       rect:
         serializedVersion: 2
         x: 139
@@ -168,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6421ebc657d20cd0800000000000000
-      internalID: -2593273667624295313
+      spriteID: 1963feebe510b63d0800000000000000
+      internalID: -3212472402756815215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DogAndandoSpriteSheet_3
+      name: DogIdleSpriteSheet_3
       rect:
         serializedVersion: 2
         x: 201
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b94a1fda7b2b7280800000000000000
-      internalID: -9044587619914462794
+      spriteID: 070358a40a09793c0800000000000000
+      internalID: -4352851496710885264
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 43db4f2c70b911d43a216b34b2cebee2
+    spriteID: a87486210487ce348bb745c6aa7d70ce
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DogAndandoSpriteSheet_0: 4915708560509176596
-      DogAndandoSpriteSheet_1: 3268201008547447613
-      DogAndandoSpriteSheet_2: -2593273667624295313
-      DogAndandoSpriteSheet_3: -9044587619914462794
+      DogIdleSpriteSheet_0: -861370988060573722
+      DogIdleSpriteSheet_1: -6469211086992858648
+      DogIdleSpriteSheet_2: -3212472402756815215
+      DogIdleSpriteSheet_3: -4352851496710885264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
