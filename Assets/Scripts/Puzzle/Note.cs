@@ -12,6 +12,7 @@ namespace Puzzle
         
         public void QuitPuzzle()
         {
+            SoundManager.Instance.PlaySound("Abrindo Fechando Puzzle", SoundManager.SoundMixer.SFX);
             if(GameManager.Instance.State == GameState.PUZZLE)
             GameManager.Instance.SetState(GameState.PLAY);
         }

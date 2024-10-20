@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine;
 
 namespace Scenario
@@ -10,7 +11,7 @@ namespace Scenario
         public float currentTime;
         public GameObject laser;
         public List<GameObject> laserPreview;
-        public float timeToReturn;
+        private float timeToReturn = 4;
 
         // Update is called once per frame
         void Update()
@@ -29,6 +30,7 @@ namespace Scenario
 
         IEnumerator DeactiveBullet()
         { 
+            SoundManager.Instance.PlaySound("Laser 2", SoundManager.SoundMixer.SFX);
             yield return new WaitForSeconds(timeToReturn); 
             laser.SetActive(false);
             currentTime = 0;

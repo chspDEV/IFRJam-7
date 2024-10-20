@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Manager;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Puzzle
@@ -15,6 +16,7 @@ namespace Puzzle
         
         public void Cortar()
         {
+            SoundManager.Instance.PlaySound("Cortando Fios", SoundManager.SoundMixer.SFX);
             img.sprite = fioCortado;
             enabled = false;
         }

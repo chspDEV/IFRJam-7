@@ -24,9 +24,10 @@ namespace Manager
 
         [Header("Transform References")] 
         public RectTransform mainCanvas;
-        public Transform scenaryHolder;
+        public RectTransform cameraMask;
         public Transform mainCameraTransform;
-        public Transform cameraMask;
+        public Transform scenaryHolder;
+        public Transform Dog, Human;
         
         private GameObject rightDoor, leftDoor, victoryHolder, defeatHolder, pauseHolder, puzzles;
         private float mainCameraSize;
@@ -154,11 +155,24 @@ namespace Manager
             SetState(state == GameState.PAUSED ? GameState.PLAY : GameState.PAUSED);
         }
 
-        public void NextLevel()
+        /// <summary>
+        /// Esta função entra na porta e checa qual entidade vai desativar
+        /// </summary>
+        /// <param name="entityToDeactiveIndex">0 = Dog // 1 = Human.</param>
+        public void EnterDoor(int entityToDeactiveIndex)
         {
+            switch (entityToDeactiveIndex)
+            {
+                case 0:
+                    Dog.gameObject.SetActive(false);
+                    break;
+                case 1:
+                    Human.gameObject.SetActive(false);
+                    break;
+            }
+            
             winnerEntitys++;
-
-            if (winnerEntitys >= 2) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); }
+            if (winnerEntitys >= 2) { SetState(GameState.WIN); }
         }
 
         public void RestartLevel()

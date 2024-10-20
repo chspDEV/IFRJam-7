@@ -140,6 +140,12 @@ namespace Entitys
             { 
                 animator.CrossFade(animationName, transitionTime); 
             }
+            
+        }
+
+        public void PlayStepSound()
+        {
+            SoundManager.Instance.PlaySound("Passo 2", SoundManager.SoundMixer.SFX);
         }
 
         private void OnDrawGizmos()

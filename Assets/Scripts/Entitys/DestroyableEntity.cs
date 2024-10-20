@@ -25,6 +25,7 @@ namespace Entitys
 
         private void OnDestroy()
         {
+            SoundManager.Instance.PlaySound("Morte", SoundManager.SoundMixer.SFX);
             if(isPlayer) GameManager.Instance.SetState(GameState.DEFEAT);
         }
 

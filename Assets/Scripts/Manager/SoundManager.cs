@@ -1,12 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Manager
 {
     public class SoundManager : MonoBehaviour
     {
+        public enum SoundMixer
+        {
+            MASTER,
+            MUSIC,
+            SFX
+        }
         public static SoundManager Instance { get; private set; }
 
-        private AudioSource audioSource;
+        public AudioSource MASTER_GROUP;
+        public AudioSource MUSIC_GROUP;
+        public AudioSource SFX_GROUP;
         public AudioClip[] soundClips;
 
         private void Awake()
@@ -19,16 +28,17 @@ namespace Manager
             {
                 Destroy(gameObject);
             }
-
-            audioSource = GetComponent<AudioSource>();
+            
         }
 
-        public void PlaySound(int clipIndex)
+        public void PlaySound(int clipIndex, SoundMixer audioSource)
         {
+            
+            Debug.Log($"Toquei som {clipIndex}");
             if (clipIndex >= 0 && clipIndex < soundClips.Length)
             {
-                audioSource.clip = soundClips[clipIndex];
-                audioSource.Play();
+                GetMixerSource(audioSource).clip = soundClips[clipIndex];
+                GetMixerSource(audioSource).Play();
             }
             else
             {
@@ -36,13 +46,33 @@ namespace Manager
             }
         }
 
-        public void PlaySound(string clipName)
+        private AudioSource GetMixerSource(SoundMixer audioSource)
         {
+            switch (audioSource)
+            {
+                case SoundMixer.MASTER:
+                    return MASTER_GROUP;
+                    break;
+                case SoundMixer.MUSIC:
+                    return MUSIC_GROUP;
+                    break;
+                case SoundMixer.SFX:
+                    return SFX_GROUP;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(audioSource), audioSource, null);
+            }
+        }
+
+        public void PlaySound(string clipName, SoundMixer audioSource)
+        {
+            Debug.Log($"Toquei som {clipName}");
+            
             AudioClip clip = System.Array.Find(soundClips, sound => sound.name == clipName);
             if (clip != null)
             {
-                audioSource.clip = clip;
-                audioSource.Play();
+                GetMixerSource(audioSource).clip = clip;
+                GetMixerSource(audioSource).Play();
             }
             else
             {

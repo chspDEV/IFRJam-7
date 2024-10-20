@@ -45,6 +45,7 @@ namespace Puzzle
         
         public void QuitPuzzle()
         {
+            SoundManager.Instance.PlaySound("Abrindo Fechando Puzzle", SoundManager.SoundMixer.SFX);
             if(GameManager.Instance.State == GameState.PUZZLE)
                 GameManager.Instance.SetState(GameState.PLAY);
         }
@@ -82,6 +83,7 @@ namespace Puzzle
         {
             if (!isCompleted)
             {
+                SoundManager.Instance.PlaySound("Completando Puzzle", SoundManager.SoundMixer.SFX);
                 PuzzleManager.Instance.PuzzleWin();
                 RemoveListeners();
                 isCompleted = true;

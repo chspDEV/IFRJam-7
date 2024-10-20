@@ -1,4 +1,6 @@
 ﻿using Interface;
+using Manager;
+using Scenario;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -10,6 +12,7 @@ namespace Entitys
         private Rigidbody2D rb;
         [FormerlySerializedAs("gridSize")] public float distanceRaycast = 1.33f;
         public IInteractable cInteractable;
+        public Door porta;
 
         void Start()
         {

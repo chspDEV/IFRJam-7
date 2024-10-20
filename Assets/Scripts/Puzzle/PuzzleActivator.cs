@@ -28,6 +28,7 @@ namespace Puzzle
 
         public void OnInteract()
         {
+            SoundManager.Instance.PlaySound("Abrindo Fechando Puzzle", SoundManager.SoundMixer.SFX);
             PuzzleManager.Instance.ControlarPuzzle(myNumberInPuzzleManager, true);
         }
 
