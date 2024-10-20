@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Manager;
 using UnityEngine;
 
 namespace Scenario
@@ -11,12 +10,26 @@ namespace Scenario
         public float currentTime;
         public GameObject laser;
         public List<GameObject> laserPreview;
-        private float timeToReturn = 4;
+        public float timeToReturn = 4;
+        
+        private List<SpriteRenderer> sprLaserPreview;
 
-        // Update is called once per frame
+        private void Start()
+        {
+            foreach (GameObject go in laserPreview)
+            {
+                sprLaserPreview.Add(go.GetComponent<SpriteRenderer>());
+            }
+        }
+
         void Update()
         {
-            laser.transform.localScale = new Vector3(laser.transform.localScale.x, laser.transform.localScale.y + currentTime / 100, laser.transform.localScale.z);
+            HandleShootLogic();
+            HandleShowPreview();
+        }
+
+        private void HandleShootLogic()
+        {
             if (currentTime > timeToShoot)
             {
                 laser.SetActive(true);
@@ -28,9 +41,20 @@ namespace Scenario
             }
         }
 
+        private void HandleShowPreview()
+        {
+
+            foreach (SpriteRenderer spr in sprLaserPreview)
+            {
+                spr.color = new Color(spr.color.r, spr.color.g, spr.color.b,
+                    Mathf.Clamp01(currentTime / timeToShoot));
+            }
+            
+        }
+
         IEnumerator DeactiveBullet()
         { 
-            SoundManager.Instance.PlaySound("Laser 2", SoundManager.SoundMixer.SFX);
+            //SoundManager.Instance.PlaySound("Lazer 2", SoundManager.SoundMixer.SFX);
             yield return new WaitForSeconds(timeToReturn); 
             laser.SetActive(false);
             currentTime = 0;

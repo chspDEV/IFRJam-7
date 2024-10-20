@@ -145,7 +145,7 @@ namespace Entitys
 
         public void PlayStepSound()
         {
-            SoundManager.Instance.PlaySound("Passo 2", SoundManager.SoundMixer.SFX);
+            SoundManager.Instance.PlaySound("Passo 4", SoundManager.SoundMixer.SFX);
         }
 
         private void OnDrawGizmos()

@@ -18,6 +18,14 @@ namespace Entitys
             if (!TryGetComponent<EntityMainLogic>(out var grd)) { Debug.Log("Objeto não possui gridMovement!"); }
             else { grd.enabled = false; isPlayer = true; }
 
+            if (isPlayer)
+            {
+                SoundManager.Instance.StopAllSounds();
+                SoundManager.Instance.PlaySound("Morte", SoundManager.SoundMixer.SFX);
+            }
+
+            
+            
             if (!TryGetComponent<ScreenShake>(out var scr)) { Debug.Log("Objeto não possui screenShake!"); } else { scr.TriggerShake(); }
 
             Destroy(gameObject, timeToDestroy);
@@ -25,7 +33,7 @@ namespace Entitys
 
         private void OnDestroy()
         {
-            SoundManager.Instance.PlaySound("Morte", SoundManager.SoundMixer.SFX);
+            
             if(isPlayer) GameManager.Instance.SetState(GameState.DEFEAT);
         }
 
