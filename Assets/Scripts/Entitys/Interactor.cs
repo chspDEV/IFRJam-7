@@ -1,5 +1,6 @@
 ﻿using Interface;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Entitys
 {
@@ -7,7 +8,7 @@ namespace Entitys
     {
         [Header("Configuration")]
         private Rigidbody2D rb;
-        public int gridSize = 1;
+        [FormerlySerializedAs("gridSize")] public float distanceRaycast = 1.33f;
         public IInteractable cInteractable;
 
         void Start()
@@ -39,7 +40,7 @@ namespace Entitys
 
             foreach (var direction in directions)
             {
-                RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, gridSize, LayerMask.GetMask("Interactable"));
+                RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, distanceRaycast, LayerMask.GetMask("Interactable"));
 
                 if (hit.collider != null)
                 {
@@ -77,10 +78,10 @@ namespace Entitys
 
                 foreach (var direction in directions)
                 {
-                    RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, gridSize, LayerMask.GetMask("Interactable"));
+                    RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, distanceRaycast, LayerMask.GetMask("Interactable"));
 
                     Gizmos.color = hit.collider != null ? Color.green : Color.red;
-                    Gizmos.DrawLine(rb.position, rb.position + direction * gridSize);
+                    Gizmos.DrawLine(rb.position, rb.position + direction * distanceRaycast);
                 }
             }
         }

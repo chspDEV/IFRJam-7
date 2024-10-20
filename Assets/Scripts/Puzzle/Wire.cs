@@ -16,6 +16,7 @@ namespace Puzzle
         public void Cortar()
         {
             img.sprite = fioCortado;
+            enabled = false;
         }
     }
 }

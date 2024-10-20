@@ -43,6 +43,7 @@ namespace Manager
 
         public void PuzzleWin()
         {
+            GameManager.Instance.levelTimer += 3f;
             currentConditions++;
             CheckVictory();
         }

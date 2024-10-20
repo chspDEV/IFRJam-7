@@ -11,7 +11,7 @@ namespace Puzzle
         
         public Button[] fiosCorretos;
         public Button[] fiosErrados;
-        
+        private bool isCompleted;
         private void Awake()
         {
             
@@ -38,9 +38,20 @@ namespace Puzzle
             fiosCertosCortados++;
             if (fiosCertosCortados >= fiosCertos)
             {
-                PuzzleComplete();
+                PuzzleCompleted();
             }
 
+        }
+        
+        public void QuitPuzzle()
+        {
+            if(GameManager.Instance.State == GameState.PUZZLE)
+                GameManager.Instance.SetState(GameState.PLAY);
+        }
+        
+        void OnDisable()
+        {
+            QuitPuzzle();
         }
 
         public void CortarFioErrado(Button btn)
@@ -67,11 +78,14 @@ namespace Puzzle
             }
         }
 
-        private void PuzzleComplete()
+        void PuzzleCompleted()
         {
-            PuzzleManager.Instance.PuzzleWin();
-            RemoveListeners();
-            
+            if (!isCompleted)
+            {
+                PuzzleManager.Instance.PuzzleWin();
+                RemoveListeners();
+                isCompleted = true;
+            }
         }
 
 

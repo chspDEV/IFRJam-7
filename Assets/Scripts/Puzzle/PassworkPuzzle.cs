@@ -14,6 +14,8 @@ namespace Puzzle
         public Button submitButton;
         public TextMeshProUGUI displayText;
 
+        private bool isCompleted;
+
         void Start()
         {
             submitButton.onClick.AddListener(CheckPassword);
@@ -41,9 +43,24 @@ namespace Puzzle
             passwordInputField.text = "";
         }
         
+        void OnDisable()
+        {
+            QuitPuzzle();
+        }
+        
+        public void QuitPuzzle()
+        {
+            if(GameManager.Instance.State == GameState.PUZZLE)
+                GameManager.Instance.SetState(GameState.PLAY);
+        }
+        
         void PuzzleCompleted()
         {
-            PuzzleManager.Instance.PuzzleWin();
+            if (!isCompleted)
+            {
+                PuzzleManager.Instance.PuzzleWin();
+                isCompleted = true;
+            }
         }
         
     }

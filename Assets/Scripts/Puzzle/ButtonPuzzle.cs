@@ -12,7 +12,7 @@ namespace Puzzle
 
         public TextMeshProUGUI display;
         public Button[] buttons;
-
+        private bool isCompleted;
         void Start()
         {
             foreach (Button button in buttons)
@@ -21,7 +21,18 @@ namespace Puzzle
             }
             
         }
-        
+
+        public void QuitPuzzle()
+        {
+            if(GameManager.Instance.State == GameState.PUZZLE)
+                GameManager.Instance.SetState(GameState.PLAY);
+        }
+
+        void OnDisable()
+        {
+            QuitPuzzle();
+        }
+
         void ButtonPressed(Button button)
         {
             playerSequence += button.name;
@@ -40,9 +51,13 @@ namespace Puzzle
             }
         }
 
-        private void PuzzleCompleted()
+        void PuzzleCompleted()
         {
-            PuzzleManager.Instance.PuzzleWin();
+            if (!isCompleted)
+            {
+                PuzzleManager.Instance.PuzzleWin();
+                isCompleted = true;
+            }
         }
     }
 

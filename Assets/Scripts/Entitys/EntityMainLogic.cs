@@ -11,6 +11,7 @@ namespace Entitys
         public float moveSpeed = 0.2f;
         [SerializeField] private bool invertMovement;
         public LayerMask obstacleLayer;
+        public Vector2 offsetRbRaycast;
         
         private Vector2 targetPosition;
         private bool isMoving;
@@ -110,7 +111,8 @@ namespace Entitys
         
         bool IsBlocked(Vector2 target)
         { 
-            RaycastHit2D hit = Physics2D.Raycast(rb.position, target - rb.position, gridSize, obstacleLayer);
+            RaycastHit2D hit = Physics2D.Raycast(rb.position + offsetRbRaycast,
+                target - rb.position, gridSize, obstacleLayer);
             return hit.collider;
         }
 
@@ -119,12 +121,24 @@ namespace Entitys
             switch (currentState)
             {
                 case State.Idle:
-                    animator.CrossFade("Idle", 0.35f); 
+                    Debug.Log("Rodando Idle state " + gameObject.name);
+                    PlayAnimation("Idle", 0f);
                     break;
 
                 case State.Walking:
-                    animator.CrossFade("Walk", 0.35f); 
+                    Debug.Log("Rodando Walking state " + gameObject.name);
+                    PlayAnimation("Walk", 0f);
                     break;
+            }
+        }
+
+        void PlayAnimation(string animationName, float transitionTime)
+        {
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            Debug.Log("Rodando anim " + animationName + "  -> " +gameObject.name);
+            if (stateInfo.normalizedTime >= 0.05f)
+            { 
+                animator.CrossFade(animationName, transitionTime); 
             }
         }
 
@@ -133,7 +147,7 @@ namespace Entitys
             Gizmos.color = debugColor;
 
             if (rb != null)
-                Gizmos.DrawLine(rb.position, targetPosition);
+                Gizmos.DrawLine(rb.position +offsetRbRaycast, targetPosition);
         }
     }
 }
