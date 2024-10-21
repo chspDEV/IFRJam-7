@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: a526289e556f9c247be85b846b373dc7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5164794599270155563
+    second: TvBossLigandoSpriteSheet_0
+  - first:
+      213: 4467977666874971051
+    second: TvBossLigandoSpriteSheet_1
+  - first:
+      213: 2068084919786534110
+    second: TvBossLigandoSpriteSheet_2
+  - first:
+      213: 882997992469531050
+    second: TvBossLigandoSpriteSheet_3
+  - first:
+      213: -7546550878019112023
+    second: TvBossLigandoSpriteSheet_4
+  - first:
+      213: -9103337113004725371
+    second: TvBossLigandoSpriteSheet_5
+  - first:
+      213: -4728205805917782276
+    second: TvBossLigandoSpriteSheet_6
+  - first:
+      213: -4804522846005310308
+    second: TvBossLigandoSpriteSheet_7
+  - first:
+      213: 3194245436464618299
+    second: TvBossLigandoSpriteSheet_8
+  - first:
+      213: 568196335893071972
+    second: TvBossLigandoSpriteSheet_9
+  - first:
+      213: 8524617157390420787
+    second: TvBossLigandoSpriteSheet_10
+  - first:
+      213: 6523203163000041599
+    second: TvBossLigandoSpriteSheet_11
+  - first:
+      213: 4228159477396014274
+    second: TvBossLigandoSpriteSheet_12
+  - first:
+      213: -775545821951710210
+    second: TvBossLigandoSpriteSheet_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b258a53e2590da740800000000000000
+      internalID: 5164794599270155563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba316720402710e30800000000000000
+      internalID: 4467977666874971051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4f731074053bc10800000000000000
+      internalID: 2068084919786534110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9878eeef9014c00800000000000000
+      internalID: 882997992469531050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a33244b5f3454790800000000000000
+      internalID: -7546550878019112023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b29b490237aa180800000000000000
+      internalID: -9103337113004725371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfeb451eed9026eb0800000000000000
+      internalID: -4728205805917782276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9cca905de7e25db0800000000000000
+      internalID: -4804522846005310308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bd2e5fc4d345c20800000000000000
+      internalID: 3194245436464618299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468c59b9e83a2e700800000000000000
+      internalID: 568196335893071972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33bc478a3268d4670800000000000000
+      internalID: 8524617157390420787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70725027b2178a50800000000000000
+      internalID: 6523203163000041599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c404e794a07daa30800000000000000
+      internalID: 4228159477396014274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossLigandoSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efba7871f25bc35f0800000000000000
+      internalID: -775545821951710210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TvBossLigandoSpriteSheet_0: 5164794599270155563
+      TvBossLigandoSpriteSheet_1: 4467977666874971051
+      TvBossLigandoSpriteSheet_10: 8524617157390420787
+      TvBossLigandoSpriteSheet_11: 6523203163000041599
+      TvBossLigandoSpriteSheet_12: 4228159477396014274
+      TvBossLigandoSpriteSheet_13: -775545821951710210
+      TvBossLigandoSpriteSheet_2: 2068084919786534110
+      TvBossLigandoSpriteSheet_3: 882997992469531050
+      TvBossLigandoSpriteSheet_4: -7546550878019112023
+      TvBossLigandoSpriteSheet_5: -9103337113004725371
+      TvBossLigandoSpriteSheet_6: -4728205805917782276
+      TvBossLigandoSpriteSheet_7: -4804522846005310308
+      TvBossLigandoSpriteSheet_8: 3194245436464618299
+      TvBossLigandoSpriteSheet_9: 568196335893071972
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

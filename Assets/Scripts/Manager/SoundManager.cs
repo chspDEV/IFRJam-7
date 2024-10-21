@@ -13,6 +13,7 @@ namespace Manager
             MUSIC,
             SFX
         }
+        
         public static SoundManager Instance { get; private set; }
 
         public AudioSource MASTER_GROUP;
@@ -106,5 +107,6 @@ namespace Manager
                 Debug.LogWarning("Índice de áudio fora do intervalo!");
             }
         }
+        
     }
 }

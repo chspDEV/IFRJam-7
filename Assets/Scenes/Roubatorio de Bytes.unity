@@ -5297,6 +5297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   levelMaxTimer: 66
+  minCameraValue: 6
   levelTimer: 60
   winnerEntitys: 0
   levelTimerImage: {fileID: 473559407}

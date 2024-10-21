@@ -15,6 +15,8 @@ namespace Manager
         
         [Header("LevelVariables")]
         public float levelMaxTimer = 60f;
+
+        public float minCameraValue;
         [HideInInspector] public float levelTimer;
         public int winnerEntitys;
         
@@ -91,7 +93,7 @@ namespace Manager
         {
             yield return new WaitForSecondsRealtime(3f);
 
-            while (mainCameraSize > 6f)
+            while (mainCameraSize > minCameraValue)
             {
                 mainCameraSize -= 0.01f;
                 mainCamera.orthographicSize = mainCameraSize;

@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 6d2e8f3e6e3c97a4bb717142954913d4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2713629179804015033
+    second: TvBossMorrendoSpriteSheet_0
+  - first:
+      213: 7422646071701556096
+    second: TvBossMorrendoSpriteSheet_1
+  - first:
+      213: 40050953871762954
+    second: TvBossMorrendoSpriteSheet_2
+  - first:
+      213: -2889184114630279034
+    second: TvBossMorrendoSpriteSheet_3
+  - first:
+      213: -8522125538677489538
+    second: TvBossMorrendoSpriteSheet_4
+  - first:
+      213: -1116196515924609143
+    second: TvBossMorrendoSpriteSheet_5
+  - first:
+      213: 7732543818201135555
+    second: TvBossMorrendoSpriteSheet_6
+  - first:
+      213: -7332588630146552961
+    second: TvBossMorrendoSpriteSheet_7
+  - first:
+      213: -382992585981142948
+    second: TvBossMorrendoSpriteSheet_8
+  - first:
+      213: -628130727533652914
+    second: TvBossMorrendoSpriteSheet_9
+  - first:
+      213: 2321101991309424076
+    second: TvBossMorrendoSpriteSheet_10
+  - first:
+      213: -7494131050157307495
+    second: TvBossMorrendoSpriteSheet_11
+  - first:
+      213: 8234909218190412600
+    second: TvBossMorrendoSpriteSheet_12
+  - first:
+      213: 2785805716910550445
+    second: TvBossMorrendoSpriteSheet_13
+  - first:
+      213: -1808539575472849125
+    second: TvBossMorrendoSpriteSheet_14
+  - first:
+      213: -2029364625682977815
+    second: TvBossMorrendoSpriteSheet_15
+  - first:
+      213: 3208080130333551855
+    second: TvBossMorrendoSpriteSheet_16
+  - first:
+      213: -462546884709237322
+    second: TvBossMorrendoSpriteSheet_17
+  - first:
+      213: 5742891774166944920
+    second: TvBossMorrendoSpriteSheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b95a529c5fb8a520800000000000000
+      internalID: 2713629179804015033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b483d7649820760800000000000000
+      internalID: 7422646071701556096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06217e512a4e8000800000000000000
+      internalID: 40050953871762954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680c2c4fa5e87e7d0800000000000000
+      internalID: -2889184114630279034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7008d789f35bb980800000000000000
+      internalID: -8522125538677489538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987f8c0ce297280f0800000000000000
+      internalID: -1116196515924609143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9750642a38f4b60800000000000000
+      internalID: 7732543818201135555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7beb089d796d3a90800000000000000
+      internalID: -7332588630146552961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c585cf0b5465faaf0800000000000000
+      internalID: -382992585981142948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4459d86e6e6847f0800000000000000
+      internalID: -628130727533652914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5337f96f5363020800000000000000
+      internalID: 2321101991309424076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9990627f38f7ff790800000000000000
+      internalID: -7494131050157307495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b44d3bd46484270800000000000000
+      internalID: 8234909218190412600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dada4b92a8b29a620800000000000000
+      internalID: 2785805716910550445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f74b196d6c6e6e0800000000000000
+      internalID: -1808539575472849125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb2c6eff9f36d3e0800000000000000
+      internalID: -2029364625682977815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec2583a1e3658c20800000000000000
+      internalID: 3208080130333551855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd31fc1f04b499f0800000000000000
+      internalID: -462546884709237322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TvBossMorrendoSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 4
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ccbb634a9d2bf40800000000000000
+      internalID: 5742891774166944920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TvBossMorrendoSpriteSheet_0: 2713629179804015033
+      TvBossMorrendoSpriteSheet_1: 7422646071701556096
+      TvBossMorrendoSpriteSheet_10: 2321101991309424076
+      TvBossMorrendoSpriteSheet_11: -7494131050157307495
+      TvBossMorrendoSpriteSheet_12: 8234909218190412600
+      TvBossMorrendoSpriteSheet_13: 2785805716910550445
+      TvBossMorrendoSpriteSheet_14: -1808539575472849125
+      TvBossMorrendoSpriteSheet_15: -2029364625682977815
+      TvBossMorrendoSpriteSheet_16: 3208080130333551855
+      TvBossMorrendoSpriteSheet_17: -462546884709237322
+      TvBossMorrendoSpriteSheet_18: 5742891774166944920
+      TvBossMorrendoSpriteSheet_2: 40050953871762954
+      TvBossMorrendoSpriteSheet_3: -2889184114630279034
+      TvBossMorrendoSpriteSheet_4: -8522125538677489538
+      TvBossMorrendoSpriteSheet_5: -1116196515924609143
+      TvBossMorrendoSpriteSheet_6: 7732543818201135555
+      TvBossMorrendoSpriteSheet_7: -7332588630146552961
+      TvBossMorrendoSpriteSheet_8: -382992585981142948
+      TvBossMorrendoSpriteSheet_9: -628130727533652914
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
