@@ -40,7 +40,15 @@ namespace Puzzle
             playerSequence += button.name;
             display.text = playerSequence;
             SoundManager.Instance.PlaySound("Seleção Menu", SoundManager.SoundMixer.SFX);
+
+            if (playerSequence.ToCharArray().Length < correctSequence.ToCharArray().Length)
+            {
+                Debug.Log("Você ainda nao completou 6 digitos!");
+                return;
+            }
+
             
+                
             if (playerSequence == correctSequence)
             {
                 Debug.Log("Você venceu!");
@@ -49,6 +57,7 @@ namespace Puzzle
             else if (!correctSequence.StartsWith(playerSequence))
             {
                 Debug.Log("Sequência errada! Tente novamente.");
+                SoundManager.Instance.PlaySound("Mensagem Error", SoundManager.SoundMixer.SFX);
                 playerSequence = "";
                 display.text = playerSequence;
             }

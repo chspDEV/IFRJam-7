@@ -992,12 +992,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 757791861}
   dialogues:
-  - Eu e meu PET fundamos juntos uma empresa chamada dd.dev!
-  - Faziamos bastante sucesso ate virem parar nossa fama
+  - Eu e meu PET fundamos juntos uma empresa de jogos chamada dd.dev!
+  - Faziamos bastante sucesso ate "aquilo" vir parar nossa fama.
   - Em um instante eu e meu PET fomos raptados...  Quando me dei conta ja estavamos
-    em outro lugar
-  - Parece que estamos em salas diferentes, mas vamos dar um jeito de fugir
-  - Meu PET Dorival o humano e eu Dog o cachorro sempre damos um jeitinho...
+    em outro lugar.
+  - Parece que estamos em salas diferentes, mas vamos dar um jeito de fugir.
+  - Meu PET Dorival, o humano e eu Dog, o cachorro sempre damos um jeitinho...
   cutsceneImages:
   - {fileID: 1399456185}
   - {fileID: 632783394}

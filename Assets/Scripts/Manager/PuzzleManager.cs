@@ -10,7 +10,7 @@ namespace Manager
 
         public string currentScene;
         private bool canWin;
-        [SerializeField] private int conditionsToWin = 2;
+        [SerializeField] private int conditionsToWin;
         [SerializeField] private int currentConditions;
         
         public List<GameObject> puzzleList;
@@ -22,6 +22,7 @@ namespace Manager
 
             currentScene = SceneManager.GetActiveScene().name;
             canWin = false;
+            if(conditionsToWin == 0) conditionsToWin = 1;
         }
         
         public void ControlarPuzzle(int numero, bool state)
@@ -47,15 +48,6 @@ namespace Manager
             currentConditions++;
             CheckVictory();
         }
-
-        public void Update()
-        {
-            switch (currentScene)
-            {
-                default:
-                    conditionsToWin = 2;
-                    break;
-            }
-        }
+        
     }
 }

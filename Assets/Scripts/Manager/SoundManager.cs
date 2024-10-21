@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace Manager
@@ -32,7 +33,26 @@ namespace Manager
             
         }
 
-        
+        private void Start()
+        {
+            //Tocando OSTs
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Menu Principal":
+                    SoundManager.Instance.PlaySound("Menu Song", SoundManager.SoundMixer.MUSIC);
+                    break;
+                case "Roubatorio de Bytes":
+                    SoundManager.Instance.PlaySound("Ambiente", SoundManager.SoundMixer.MUSIC);
+                    break;
+                case "Corredor if else":
+                    SoundManager.Instance.PlaySound("Ambiente", SoundManager.SoundMixer.MUSIC);
+                    break;
+                case "private SalaDoChefe":
+                    SoundManager.Instance.PlaySound("BossIFRJAM", SoundManager.SoundMixer.MUSIC);
+                    break;
+            }
+        }
+
 
         public void StopAllSounds()
         {
