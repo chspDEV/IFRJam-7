@@ -109,6 +109,7 @@ MonoBehaviour:
   laser: {fileID: 4552345482821544828}
   laserPreview:
   - {fileID: 3038771405847106277}
+  timeToReturn: 4
 --- !u!114 &1574599813970710681
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ namespace Entitys
         public Vector2 offsetRbRaycast;
         
         private Vector2 targetPosition;
-        private bool isMoving;
+        [HideInInspector] public bool isMoving;
         private Rigidbody2D rb;
         private SpriteRenderer spriteRenderer;
         private Animator animator; 
@@ -118,6 +118,8 @@ namespace Entitys
 
         private void UpdateState()
         {
+            if(GameManager.Instance.State == GameState.DEFEAT) currentState = State.Idle;
+            
             switch (currentState)
             {
                 case State.Idle:

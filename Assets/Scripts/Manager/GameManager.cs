@@ -165,14 +165,21 @@ namespace Manager
             {
                 case 0:
                     Dog.gameObject.SetActive(false);
+                    cameraMask.Find("Dog").gameObject.SetActive(false);
                     break;
                 case 1:
                     Human.gameObject.SetActive(false);
+                    cameraMask.Find("Human").gameObject.SetActive(false);
                     break;
             }
             
             winnerEntitys++;
             if (winnerEntitys >= 2) { SetState(GameState.WIN); }
+        }
+
+        public void NextLevel()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         public void RestartLevel()

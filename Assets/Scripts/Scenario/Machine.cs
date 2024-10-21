@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,26 +12,32 @@ namespace Scenario
         public GameObject laser;
         public List<GameObject> laserPreview;
         public float timeToReturn = 4;
-        
-        private List<SpriteRenderer> sprLaserPreview;
+        private bool canRun = false;
 
         private void Start()
         {
-            foreach (GameObject go in laserPreview)
-            {
-                sprLaserPreview.Add(go.GetComponent<SpriteRenderer>());
-            }
+            HandleShowPreview();
+            StartCoroutine(Wait());
+        }
+
+        private IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(6);
+            canRun = true;
         }
 
         void Update()
         {
-            HandleShootLogic();
-            HandleShowPreview();
+            if (canRun)
+            {
+                HandleShootLogic();
+                HandleShowPreview();
+            }
         }
 
         private void HandleShootLogic()
         {
-            if (currentTime > timeToShoot)
+            if (currentTime >= timeToShoot)
             {
                 laser.SetActive(true);
                 StartCoroutine(DeactiveBullet());
@@ -44,10 +51,11 @@ namespace Scenario
         private void HandleShowPreview()
         {
 
-            foreach (SpriteRenderer spr in sprLaserPreview)
+            foreach (GameObject go in laserPreview)
             {
+                var spr = go.GetComponent<SpriteRenderer>();
                 spr.color = new Color(spr.color.r, spr.color.g, spr.color.b,
-                    Mathf.Clamp01(currentTime / timeToShoot));
+                    currentTime / timeToShoot);
             }
             
         }

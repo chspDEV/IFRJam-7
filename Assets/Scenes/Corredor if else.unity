@@ -3986,6 +3986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4396c9bdf3e57cb42a466106e44262cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashDuration: 3
   sprRenderer: {fileID: 760569060}
 --- !u!114 &760569068
 MonoBehaviour:
@@ -4721,6 +4722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4396c9bdf3e57cb42a466106e44262cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flashDuration: 3
   sprRenderer: {fileID: 960801026}
 --- !u!114 &960801034
 MonoBehaviour:
@@ -8032,8 +8034,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50119cdbb16b5064aba930ce711d8558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MASTER_GROUP: {fileID: 0}
+  MUSIC_GROUP: {fileID: 0}
+  SFX_GROUP: {fileID: 0}
   soundClips:
-  - {fileID: 8300000, guid: fcb286b01e4e36b4cba11a10bb967aed, type: 3}
+  - {fileID: 8300000, guid: 38cc3b4c42cc5b44c83982fe785e7b6e, type: 3}
   - {fileID: 8300000, guid: 39774c798a889fe41a8335594272f786, type: 3}
   - {fileID: 8300000, guid: b9ea1d722a669c24aa028b6f06b1568a, type: 3}
   - {fileID: 8300000, guid: ddaf620f0aa7b02498245576d9bb0f9f, type: 3}

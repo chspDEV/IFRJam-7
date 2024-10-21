@@ -16,15 +16,13 @@ namespace Entitys
 
             //Se for um objeto com movimento entao é o PET ou o PLAYER
             if (!TryGetComponent<EntityMainLogic>(out var grd)) { Debug.Log("Objeto não possui gridMovement!"); }
-            else { grd.enabled = false; isPlayer = true; }
+            else { grd.enabled = false; isPlayer = true; grd.isMoving = false; }
 
             if (isPlayer)
             {
                 SoundManager.Instance.StopAllSounds();
-                SoundManager.Instance.PlaySound("Morte", SoundManager.SoundMixer.SFX);
+                SoundManager.Instance.PlaySound("Morte", SoundManager.SoundMixer.MASTER);
             }
-
-            
             
             if (!TryGetComponent<ScreenShake>(out var scr)) { Debug.Log("Objeto não possui screenShake!"); } else { scr.TriggerShake(); }
 

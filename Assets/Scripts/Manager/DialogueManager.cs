@@ -8,10 +8,11 @@ namespace Manager
     public class DialogueManager : MonoBehaviour
     {
         public TextMeshProUGUI dialogueText; 
-        public string[] dialogues; 
+        public string[] dialogues;
+        public GameObject[] cutsceneImages;
         public string nextSceneName; 
         public float typingSpeed = 0.05f;
-        public GameObject pressSpace;
+        public GameObject pressE;
 
         private int currentDialogueIndex;
         private bool isTyping;
@@ -23,9 +24,9 @@ namespace Manager
 
         void Update()
         {
-            pressSpace.SetActive(!isTyping);
+            pressE.SetActive(!isTyping);
 
-            if (Input.GetKeyDown(KeyCode.Space) && !isTyping) 
+            if (Input.GetKeyDown(KeyCode.E) && !isTyping) 
             {
                 AdvanceDialogue();
             }
@@ -33,6 +34,7 @@ namespace Manager
 
         IEnumerator TypeDialogue()
         {
+            cutsceneImages[currentDialogueIndex].SetActive(true);
             isTyping = true;
             dialogueText.text = "";
 
@@ -60,8 +62,8 @@ namespace Manager
 
         void LoadNextScene()
         {
-            dialogueText.text = "Loading...";
-            pressSpace.SetActive(false);
+            dialogueText.text = "...";
+            pressE.SetActive(false);
             SceneManager.LoadScene(nextSceneName);
         }
     }
