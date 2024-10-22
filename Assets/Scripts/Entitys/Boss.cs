@@ -2,6 +2,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Entitys
 {
@@ -18,6 +19,8 @@ namespace Entitys
         public Camera mainCamera;
         public Camera dogCamera;
         public Camera humanCamera;
+        
+        public List<GameObject> lasers;
 
         private enum States
         {
@@ -113,6 +116,13 @@ namespace Entitys
         {
             if (!isDead)
             {
+                foreach (GameObject g in lasers)
+                {
+                    g.SetActive(false);
+                }
+                
+                SoundManager.Instance.StopAllSounds();
+                SoundManager.Instance.PlaySound("Diálogo Tv", SoundManager.SoundMixer.MASTER);
                 bossCamera.enabled = true;
                 mainCamera.enabled = false;
                 dogCamera.enabled = false;

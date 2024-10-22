@@ -654,12 +654,12 @@ Transform:
   m_GameObject: {fileID: 57179438}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.193, y: -6.375, z: 0.1471335}
+  m_LocalPosition: {x: -3.1930003, y: -6.375, z: 0.1471335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 749233877}
-  m_Father: {fileID: 960188770}
+  m_Father: {fileID: 2098055009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &57179440
 BoxCollider2D:
@@ -2812,7 +2812,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272961277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6172,6 +6172,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 704b287fed0bfed43b6b1b57107d8465, type: 3}
   - {fileID: 8300000, guid: 1c92a513084cd684394986730a038b88, type: 3}
   - {fileID: 8300000, guid: 679c0b3013b02224d927e1db2a59d0d3, type: 3}
+  - {fileID: 8300000, guid: 5e54f068040595848b515b83f3f75be9, type: 3}
 --- !u!1 &567276233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,12 +6403,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15534a9e49b4db2418a9dfc7be426f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShoot: 3
+  timeToShoot: 2
   currentTime: 0
   laser: {fileID: 343797902}
   laserPreview:
   - {fileID: 241303307}
-  timeToReturn: 3
+  timeToReturn: 1
 --- !u!212 &570658566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7740,6 +7741,12 @@ MonoBehaviour:
   mainCamera: {fileID: 450780529}
   dogCamera: {fileID: 921026146}
   humanCamera: {fileID: 1172658660}
+  lasers:
+  - {fileID: 1354201956}
+  - {fileID: 1844243507}
+  - {fileID: 1016393473}
+  - {fileID: 1120194169}
+  - {fileID: 570658562}
 --- !u!95 &736241990
 Animator:
   serializedVersion: 7
@@ -9241,11 +9248,6 @@ Transform:
   - {fileID: 1779428186}
   - {fileID: 361829100}
   - {fileID: 2098055009}
-  - {fileID: 57179439}
-  - {fileID: 1381911704}
-  - {fileID: 1887911310}
-  - {fileID: 1548574642}
-  - {fileID: 2046510717}
   - {fileID: 1112507469}
   - {fileID: 1004027370}
   - {fileID: 320161851}
@@ -10133,12 +10135,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15534a9e49b4db2418a9dfc7be426f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShoot: 3
+  timeToShoot: 2.6
   currentTime: 0
   laser: {fileID: 811361565}
   laserPreview:
   - {fileID: 2080449212}
-  timeToReturn: 3
+  timeToReturn: 2.6
 --- !u!212 &1016393477
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11195,12 +11197,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15534a9e49b4db2418a9dfc7be426f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShoot: 3
+  timeToShoot: 1
   currentTime: 0
   laser: {fileID: 960933983}
   laserPreview:
   - {fileID: 954108392}
-  timeToReturn: 3
+  timeToReturn: 2
 --- !u!212 &1120194173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12222,12 +12224,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15534a9e49b4db2418a9dfc7be426f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShoot: 3
+  timeToShoot: 2.3
   currentTime: 0
   laser: {fileID: 2091935168}
   laserPreview:
   - {fileID: 795557850}
-  timeToReturn: 3
+  timeToReturn: 2.3
 --- !u!212 &1354201960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12316,7 +12318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 69567085}
-  m_Father: {fileID: 960188770}
+  m_Father: {fileID: 2098055009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1381911705
 MonoBehaviour:
@@ -13512,12 +13514,12 @@ Transform:
   m_GameObject: {fileID: 1548574641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.26, y: -13.34, z: 0.1471335}
+  m_LocalPosition: {x: -5.2600007, y: -13.34, z: 0.1471335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1551873352}
-  m_Father: {fileID: 960188770}
+  m_Father: {fileID: 2098055009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1548574643
 MonoBehaviour:
@@ -15273,12 +15275,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15534a9e49b4db2418a9dfc7be426f8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToShoot: 3
+  timeToShoot: 2.9
   currentTime: 0
   laser: {fileID: 1026504093}
   laserPreview:
   - {fileID: 810881005}
-  timeToReturn: 3
+  timeToReturn: 2.9
 --- !u!212 &1844243511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15367,7 +15369,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 523296471}
-  m_Father: {fileID: 960188770}
+  m_Father: {fileID: 2098055009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1887911311
 MonoBehaviour:
@@ -39207,12 +39209,12 @@ Transform:
   m_GameObject: {fileID: 2046510716}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.201, y: -8.347, z: 0.1471335}
+  m_LocalPosition: {x: -5.2010007, y: -8.347, z: 0.1471335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1696233246}
-  m_Father: {fileID: 960188770}
+  m_Father: {fileID: 2098055009}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2046510718
 MonoBehaviour:
@@ -39891,7 +39893,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 57179439}
+  - {fileID: 1381911704}
+  - {fileID: 1887911310}
+  - {fileID: 1548574642}
+  - {fileID: 2046510717}
   m_Father: {fileID: 960188770}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098807803
